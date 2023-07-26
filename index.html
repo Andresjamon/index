@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <title>Artificial Intelligence</title>
+    <link rel="icon" href="img/logo_ai.png">
+    <link rel="stylesheet" href="css/css_pag1.css">
+    <link rel="stylesheet" href="css/css_media_pag1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Script para desplegar opciones-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+   //Abrir ocultar menu//
+   $(document).ready(function(){
+         $(".op-barras").click(function(){
+             $(".menu-adaptable").slideToggle("slow");
+         });
+    });
+    //Ocultar menu cuando abrims la pagina en tamaño menor a 600px//
+    $(document).ready(function(){
+             $(".menu-adaptable").hide();
+    });
+    //Ocultar menu cuando seleccionamos una opcion del mismo///
+         $(document).ready(function(){
+             $(".menu-adaptable").slideToggle("slow");
+    });    
+    </script>
+     <!--Script para efecto scroll de la página-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+    <body>
+        <nav>
+            <div class="nav-1">
+                <img src="Recursos/logo_ai.png"
+                width="60" height="50" alt="imagen del logo de AI"
+                title="logo AI">
+            </div>
+            <div class="nav-2">
+                <ul>
+                    <li class="opcion"><a href="#home">Home</a></li>
+                    <li class="opcion"><a href="#about">About</a></li>
+                    <li class="opcion"><a href="#career">Career</a></li>
+                    <li class="opcion"><a href="#contact">Contact</a></li>
+                    <li class="opcion"><a href="#login">Login</a></li>
+                    <li><a class="op-barras" href="#barras">☰</a></li>
+                </ul>
+            </div>
+            <div class="menu-adaptable">
+                <ul class="menu-oculto">
+<li class="menu-hover"><a class="op-menu-oculto" href="#home">Home</a></li>
+<li class="menu-hover"><a class="op-menu-oculto" href="#about">About</a></li>
+<li class="menu-hover"><a class="op-menu-oculto" href="#career">Career</a></li>
+<li class="menu-hover"><a class="op-menu-oculto" href="#contact">Contact</a></li>
+<li class="menu-hover"><a class="op-menu-oculto" href="#login">Login</a></li>             
+                </ul>
+            </div>
+        </nav>
+        <header id="home">
+            <article class="header-1">
+                <h1>What is Artificial<br>
+                    Intelligence?</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Velit, sunt aut delectus sed enim distinctio id reiciendis
+                        assumenda ut commodi reprehenderit, cumque rem ipsam?
+                        Harum itaque corporis non sit velit.
+                    </p>
+                    <div class="enlaces">
+                        <div class="boton">Get Started</div>
+                        <div class="boton">View Demo</div>
+                    </div>
+            </article>
+            <article class="header-2">
+                <img src="Recursos/robot2.png" width="150" height="200"
+                alt="imagen de un robot" title="robot IA" class="robot">
+
+                <img src="Recursos/base_robot.png" width="300" height="200"
+                alt="imagen de base robot" title="base robot">
+            </article>
+        </header>
+        <section id="about"></section>
+        <section id="career"></section>
+        <section id="contact"></section>
+        <section id="login"></section>
+    <script>
+            $(function(){
+                $('a[href*=#]').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                    && location.hostname == this.hostname) {
+                        var $target = $(this.hash);
+                        $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+                                if ($target.length) {
+                                    var targetOffset = $target.offset().top;
+                            $('html,body').animate({scrollTop: targetOffset}, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
